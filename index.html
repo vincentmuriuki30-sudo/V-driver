@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V DRIVER | FIND DRIVER HERE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        amberGold: { DEFAULT: '#f59e0b', 500: '#f59e0b', 600: '#d97706' },
+                        darkBg: '#0b0f19',
+                        cardBg: '#111827',
+                    },
+                    fontFamily: { sans: ['Outfit', 'Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(245, 158, 11, 0.15);
+        }
+        .glass-input {
+            background: rgba(31, 41, 55, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-input:focus {
+            border-color: #f59e0b;
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-100 min-h-screen flex flex-col selection:bg-amber-500 selection:text-slate-900">
+
+    <header class="sticky top-0 z-50 glass-panel border-b border-amber-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center shadow-lg shadow-amber-500/30 text-slate-950 font-extrabold text-2xl">
+                    V
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-black tracking-wider bg-gradient-to-r from-white via-amber-200 to-amber-500 bg-clip-text text-transparent">
+                        V DRIVER <span class="text-xs px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/30 ml-1 font-semibold uppercase tracking-widest inline-block">FIND DRIVER HERE</span>
+                    </h1>
+                    <p class="text-xs text-slate-400 tracking-wide">Embu & Countryside Professional Chauffeurs</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3">
+                <a href="#roster" class="hidden sm:inline-flex items-center space-x-2 text-sm font-medium text-slate-300 hover:text-amber-400 transition">
+                    <i class="fa-solid fa-users text-amber-400"></i>
+                    <span>Driver Roster</span>
+                </a>
+                <a href="#join" class="hidden sm:inline-flex items-center space-x-2 text-sm font-medium bg-slate-800/80 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700 transition">
+                    <i class="fa-solid fa-id-card text-amber-400"></i>
+                    <span>Join As Driver</span>
+                </a>
+                <button id="emergencyBtn" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-4 py-2.5 rounded-xl text-sm shadow-lg shadow-amber-500/20 transition flex items-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span class="hidden md:inline">Emergency Dispatch</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative overflow-hidden py-16 lg:py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-800/60">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <h2 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                Your Trusted Road Partner in <span class="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">Embu & Beyond</span>
+            </h2>
+            <div class="max-w-3xl mx-auto space-y-4 mb-10">
+                <p class="text-lg sm:text-xl text-slate-300 font-medium">
+                    "If you need driver within embu or country side we got you."
+                </p>
+                <p class="text-sm sm:text-base text-slate-400 leading-relaxed">
+                    Whether navigating the busy terrain of Embu town or embarking on a long-haul countryside journey, our seasoned drivers ensure your safety, comfort, and peace of mind.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#roster" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-lg shadow-amber-500/25 transition flex items-center space-x-3 text-base">
+                    <i class="fa-solid fa-car text-xl"></i>
+                    <span>Browse Available Drivers</span>
+                </a>
+                <a href="#join" class="glass-panel hover:bg-slate-800/80 text-white font-semibold px-8 py-4 rounded-xl transition flex items-center space-x-3 text-base border border-slate-700">
+                    <i class="fa-solid fa-user-plus text-amber-400"></i>
+                    <span>Register as a Driver</span>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-16 pt-10 border-t border-slate-800 text-left">
+                <div class="glass-panel p-5 rounded-2xl">
+                    <div class="text-2xl font-black text-amber-400 mb-1" id="statTotalDrivers">1</div>
+                    <div class="text-xs text-slate-400 font-medium uppercase tracking-wider">Approved Drivers Online</div>
+                </div>
+                <div class="glass-panel p-5 rounded-2xl">
+                    <div class="text-2xl font-black text-amber-400 mb-1">Embu</div>
+                    <div class="text-xs text-slate-400 font-medium uppercase tracking-wider">& Countryside Coverage</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roster" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full flex-grow">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+                <h3 class="text-3xl font-bold text-white tracking-tight">Roster Drivers Dashboard</h3>
+                <p class="text-slate-400 text-sm mt-1">Directly connect with certified drivers via WhatsApp instantly.</p>
+            </div>
+            
+            <div class="flex flex-wrap items-center gap-3">
+                <input type="text" id="searchInput" placeholder="Search driver name or county..." class="glass-input text-sm rounded-xl px-4 py-2.5 text-white placeholder-slate-400 outline-none w-full sm:w-64">
+                <select id="classFilter" class="glass-input text-sm rounded-xl px-4 py-2.5 text-white outline-none cursor-pointer">
+                    <option value="" class="bg-slate-900">All Classes</option>
+                    <option value="A" class="bg-slate-900">Class A</option>
+                    <option value="B" class="bg-slate-900">Class B</option>
+                    <option value="B2" class="bg-slate-900">Class B2</option>
+                    <option value="B3" class="bg-slate-900">Class B3</option>
+                    <option value="C" class="bg-slate-900">Class C</option>
+                    <option value="C1" class="bg-slate-900">Class C1</option>
+                    <option value="D1" class="bg-slate-900">Class D1</option>
+                    <option value="D2" class="bg-slate-900">Class D2</option>
+                    <option value="D3" class="bg-slate-900">Class D3</option>
+                    <option value="E" class="bg-slate-900">Class E</option>
+                    <option value="CD" class="bg-slate-900">Class CD</option>
+                </select>
+                <select id="statusFilter" class="glass-input text-sm rounded-xl px-4 py-2.5 text-white outline-none cursor-pointer">
+                    <option value="" class="bg-slate-900">All Statuses</option>
+                    <option value="Ready for Hire" class="bg-slate-900">Ready for Hire</option>
+                    <option value="Booked" class="bg-slate-900">Booked</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="driversGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <section id="join" class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/40 border-t border-slate-800/80">
+        <div class="max-w-3xl mx-auto glass-panel p-8 sm:p-10 rounded-3xl relative shadow-2xl">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold text-white">Are You a Professional Driver?</h3>
+                <p class="text-slate-400 text-sm mt-1">Submit your credentials to join our roster. Instant WhatsApp direct dispatch to admin for approval.</p>
+                
+                <div class="mt-4 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs sm:text-sm text-left leading-relaxed space-y-1">
+                    <p class="font-bold">* Note:</p>
+                    <p>- This website is not runned by a company.</p>
+                    <p>- This web is for drivers looking for job and ready whether permanent or temporary. Thank you.</p>
+                </div>
+            </div>
+
+            <form id="driverForm" class="space-y-6">
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Full Names</label>
+                    <input type="text" id="regName" required placeholder="e.g. John Kamau Mwangi" class="w-full glass-input rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 outline-none">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Phone Number / WhatsApp</label>
+                        <input type="text" id="regPhone" required placeholder="e.g. +254712345678" class="w-full glass-input rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Driver's Age</label>
+                        <input type="number" id="regAge" min="18" max="80" required placeholder="e.g. 25" class="w-full glass-input rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">County (Optional)</label>
+                        <input type="text" id="regCounty" placeholder="e.g. Embu" class="w-full glass-input rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Constituency (Optional)</label>
+                        <input type="text" id="regConstituency" placeholder="e.g. Manyatta" class="w-full glass-input rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-3">Licensed Classes (Select all applicable)</label>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 gap-2.5" id="licenseClassesContainer"></div>
+                </div>
+
+                <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold py-4 rounded-xl shadow-lg shadow-amber-500/20 transition flex items-center justify-center space-x-2 text-base">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Submit Application via WhatsApp & Register</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="glass-panel border-t border-amber-500/10 mt-auto py-10 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <p class="text-xs text-slate-400">©2026 vinitodrivers.com - All Rights Reserved. Crafted for Embu & Beyond.</p>
+            </div>
+            <div>
+                <button id="adminPortalBtn" class="text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-amber-400 px-4 py-2.5 rounded-xl border border-amber-500/30 transition flex items-center space-x-2 shadow-md">
+                    <i class="fa-solid fa-lock text-amber-400"></i>
+                    <span>Admin Portal Login</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Modal -->
+    <div id="adminModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden">
+        <div class="glass-panel w-full max-w-xl rounded-3xl p-6 sm:p-8 border border-amber-500/30 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button id="closeAdminModalBtn" class="absolute top-5 right-5 text-slate-400 hover:text-white transition"><i class="fa-solid fa-xmark text-xl"></i></button>
+
+            <div id="adminLoginView">
+                <div class="text-center mb-6">
+                    <h3 class="text-xl font-bold text-white">Admin Authentication</h3>
+                    <p class="text-xs text-slate-400 mt-1">Enter password to manage roster</p>
+                </div>
+                <form id="adminLoginForm" class="space-y-4">
+                    <input type="password" id="adminPasswordInput" required placeholder="Enter password" class="w-full glass-input rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 outline-none">
+                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3 rounded-xl shadow-md transition text-sm">Access Admin Dashboard</button>
+                </form>
+            </div>
+
+            <div id="adminDashboardView" class="hidden">
+                <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+                    <h3 class="text-xl font-bold text-white">Admin Control Panel</h3>
+                    <button id="logoutAdminBtn" class="text-xs text-red-400 hover:text-red-300 bg-red-500/10 px-3 py-1.5 rounded-lg border border-red-500/20 transition">Logout</button>
+                </div>
+
+                <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-800 mb-6">
+                    <h4 class="text-sm font-bold text-white mb-3" id="adminFormTitle">Add New Driver to Roster</h4>
+                    <form id="adminDriverForm" class="space-y-3">
+                        <input type="hidden" id="editDriverId" value="">
+                        <input type="text" id="adminDriverName" required placeholder="Driver Full Names" class="w-full glass-input rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-slate-500 outline-none">
+                        <div class="grid grid-cols-2 gap-3">
+                            <input type="text" id="adminDriverPhone" required placeholder="Phone (+254...)" class="w-full glass-input rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-slate-500 outline-none">
+                            <input type="number" id="adminDriverAge" required placeholder="Driver's Age" class="w-full glass-input rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-slate-500 outline-none">
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <input type="text" id="adminDriverCounty" placeholder="County (Optional)" class="w-full glass-input rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-slate-500 outline-none">
+                            <input type="text" id="adminDriverConstituency" placeholder="Constituency (Optional)" class="w-full glass-input rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-slate-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Licensed Classes</label>
+                            <div class="grid grid-cols-4 gap-2" id="adminClassesContainer"></div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Driver Status</label>
+                            <select id="adminDriverStatus" class="w-full glass-input rounded-xl px-3.5 py-2.5 text-sm text-white outline-none cursor-pointer">
+                                <option value="Ready for Hire" class="bg-slate-900">Ready for Hire</option>
+                                <option value="Booked" class="bg-slate-900">Booked</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center space-x-2 pt-2">
+                            <button type="submit" id="adminSubmitBtn" class="flex-1 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2.5 rounded-xl text-sm transition">Add Driver</button>
+                            <button type="button" id="adminCancelEditBtn" class="hidden px-4 py-2.5 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 text-sm transition">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-3">Manage Existing Roster Drivers</h4>
+                    <div id="adminDriversList" class="space-y-2.5 max-h-60 overflow-y-auto pr-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hire Options Modal -->
+    <div id="hireModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden">
+        <div class="glass-panel w-full max-w-sm rounded-3xl p-6 text-center border border-amber-500/30 shadow-2xl relative">
+            <button id="closeHireModalBtn" class="absolute top-4 right-4 text-slate-400 hover:text-white transition"><i class="fa-solid fa-xmark text-xl"></i></button>
+            <h3 id="hireModalDriverName" class="text-lg font-bold text-white mb-1">Driver Name</h3>
+            <p class="text-xs text-slate-400 mb-6">Choose how you would like to contact this driver:</p>
+            <div id="hireModalOptions" class="space-y-3"></div>
+        </div>
+    </div>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
